@@ -7,6 +7,8 @@
 module.exports = {
   siteName: 'Gridsome',
 	plugins: [
+		{ use: 'gridsome-plugin-pug' },
+		{ use: 'gridsome-plugin-typescript', },
 		{
 			use: 'gridsome-plugin-tailwindcss',
 			options: {
@@ -17,6 +19,6 @@ module.exports = {
 				shouldTimeTravel: true,
 				shouldPurgeUnusedKeyframes: true,
 			}
-		}
+		},
   ]
 }

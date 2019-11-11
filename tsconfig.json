@@ -5,6 +5,7 @@
 		"strict": true,
 		"strictPropertyInitialization": false,
 		"noImplicitThis": false,
+		"noImplicitReturns": true,
 		"jsx": "preserve",
 		"moduleResolution": "node",
 		"experimentalDecorators": true,
@@ -13,11 +14,11 @@
 		"sourceMap": true,
 		"baseUrl": ".",
 		"types": ["node"],
-		"paths": {
-			"@/*": ["src/*"]
-		},
+		"outDir": "./built/",
 		"lib": ["es2017", "dom", "esnext.asynciterable"]
 	},
-	"include": ["src/**/*.ts", "src/**/*.vue", "test/**/*.ts"],
+	"include": [
+		"./src/**/*"
+	],
 	"exclude": ["node_modules"]
 }

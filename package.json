@@ -10,13 +10,15 @@
 		"gridsome": "^0.7.0"
 	},
 	"devDependencies": {
+		"gridsome-plugin-pug": "0.0.3",
 		"gridsome-plugin-tailwindcss": "^2.2.27",
+		"gridsome-plugin-typescript": "^0.4.0",
 		"prettier": "^1.10.2",
-		"pug": "^2.0.0-rc.4",
-		"pug-loader": "^2.3.0",
+		"pug": "^2.0.4",
+		"ts-loader": "^6.2.1",
 		"tslint": "^5.9.1",
 		"tslint-config-prettier": "^1.8.0",
 		"tslint-config-standard": "^7.0.0",
-		"typescript": "^2.9"
+		"typescript": "^2.9.2"
 	}
 }
