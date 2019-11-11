@@ -1,16 +1,16 @@
 <template lang="pug">
-header#app-banner.container
+#app-banner.md_min-h-screen
 	.row
 		.col.s12.l5
 			.card.large.hoverable
 				.card-image
-					img(:src="imagePath({ file: 'portrait.png' })" alt="That's me!")
+					img.h-64(:src="imagePath({ file: 'portrait.png' })" alt="That's me!")
 				.card-content
 					h1 Nico Salvador
 					h3 Quezon City, Philippines
 					.center-align
 						a(v-for="link in links" :href="link.url")
-							FAIcon(:icon="link.icon")
+							//- FAIcon(:icon="link.icon")
 
 		.col.s12.m10.offset-m1.l7.sidebox
 			.row
@@ -24,24 +24,24 @@ header#app-banner.container
 			.row.center-align
 				.col.s12.m6.offset-m3.pull-l3
 					a#scrollDownBtn.waves-effect.waves-light.btn-large.red.darken-1.hoverable(href="#contacts" target="_parent" data-scroll @click="openFab()")
-						MaterialIcon.left(icon="chat_bubble")
+						//- MaterialIcon.left(icon="chat_bubble")
 						span Contact Me
 			.row
 				a#seeMore.hvr-icon-hang.white-text(href="#app-body" target="_parent" data-scroll)
 </template>
 
 <script lang="ts">
-import FAIcon from "@/components/shared/FAIcon.vue"
-import MaterialIcon from "@/components/shared/MaterialIcon.vue"
-import { ImagePathOptions, ImageService } from "@/helpers/images.service"
+// import FAIcon from "~/components/shared/FAIcon.vue"
+// import MaterialIcon from "~/components/shared/MaterialIcon.vue"
+import { ImagePathOptions, ImageService } from "~/helpers/images.service"
 import Vue from "vue"
 import { Component } from "vue-property-decorator"
 
 @Component({
-	components: {
-		FAIcon,
-		MaterialIcon,
-	},
+	// components: {
+	// 	FAIcon,
+	// 	MaterialIcon,
+	// },
 	mixins: [ImageService],
 })
 export default class Banner extends Vue implements ImageService {
@@ -73,11 +73,11 @@ export default class Banner extends Vue implements ImageService {
 }
 </script>
 
-<style lang="stylus">
-#app-banner
-	min-height 100vh
+<style lang="postcss">
+/* #app-banner {
+	min-height: 100vh; */
 
-	@media TabletUp
+	/* @media TabletUp
 		padding-top 10vh
 
 		& > div
@@ -114,14 +114,18 @@ export default class Banner extends Vue implements ImageService {
 
 		i
 			color black
-			font-size 1.7rem
+			font-size 1.7rem */
+/* } */
 
-.sidebox
-	color white
 
-	a
+/* .sidebox {
+	color: white;
+
+	& a {
 		display block
 		min-width 10rem
+	}
+}
 
 #seeMore
 	font-size 1.25rem
@@ -170,5 +174,5 @@ lowPoint = 6px
 		animation-timing-function ease-out, ease-in-out
 		animation-iteration-count 1, infinite
 		animation-fill-mode forwards
-		animation-direction normal, alternate
+		animation-direction normal, alternate */
 </style>

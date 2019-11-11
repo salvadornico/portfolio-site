@@ -19,9 +19,6 @@ export default class Footer extends Vue {
 <style lang="postcss">
 footer {
 	color: white;
-	position: absolute;
-	bottom: 0;
-	width: 100%;
 
 	& p {
 		line-height: 2.4rem;
