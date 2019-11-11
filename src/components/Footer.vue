@@ -1,6 +1,6 @@
 <template lang="pug">
-footer.red.darken-4
-	p.center-align.
+footer.bg-red-700
+	p.text-center.
 		© {{ currentYear }} Nico Salvador
 </template>
 
@@ -16,13 +16,15 @@ export default class Footer extends Vue {
 }
 </script>
 
-<style lang="stylus">
-footer
-	color white
-	position absolute
-	bottom 0
-	width 100%
+<style lang="postcss">
+footer {
+	color: white;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
 
-	p
-		line-height 2.4rem
+	& p {
+		line-height: 2.4rem;
+	}
+}
 </style>

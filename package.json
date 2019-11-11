@@ -19,6 +19,7 @@
 		"tslint": "^5.9.1",
 		"tslint-config-prettier": "^1.8.0",
 		"tslint-config-standard": "^7.0.0",
-		"typescript": "^2.9.2"
+		"typescript": "^2.9.2",
+		"vue-property-decorator": "^8.3.0"
 	}
 }

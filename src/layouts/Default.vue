@@ -1,50 +1,46 @@
-<template>
-  <div class="layout">
-    <header class="header">
-      <strong>
-        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
-      </strong>
-      <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/about/">About</g-link>
-      </nav>
-    </header>
-    <slot/>
-  </div>
+<template lang="pug">
+#app
+	//- transition(name="component-fade" mode="out-in")
+	slot
+	Footer
 </template>
 
-<static-query>
-query {
-  metadata {
-    siteName
-  }
-}
-</static-query>
+<script lang="ts">
+import Footer from "~/components/Footer.vue"
+import Vue from "vue"
+import { Component } from "vue-property-decorator"
+
+@Component({
+	components: {
+		Footer,
+	},
+})
+export default class App extends Vue {}
+</script>
 
 <style>
 body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  margin:0;
-  padding:0;
-  line-height: 1.5;
+	display: flex;
+	min-height: 100vh;
+	width: 100%;
+	flex-direction: column;
+	background-color: #3949ab;
 }
 
-.layout {
-  max-width: 760px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
+main {
+	flex: 1 0 auto;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  height: 80px;
+* {
+	position: relative;
+	font-family: "Open Sans", sans-serif;
 }
 
-.nav__link {
-  margin-left: 20px;
+.component-fade-enter-active, .component-fade-leave-active {
+	transition: opacity 0.3s ease;
+}
+
+.component-fade-enter, .component-fade-leave-to {
+	opacity: 0;
 }
 </style>

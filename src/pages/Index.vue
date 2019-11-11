@@ -14,14 +14,8 @@ Layout
 import Vue from "vue"
 
 export default Vue.extend({
-	metaInfo: {
-		title: 'Nico Salvador'
-	}
+	// metaInfo: {
+	// 	title: 'Nico Salvador'
+	// }
 })
 </script>
-
-<style>
-.home-links a {
-	margin-right: 1rem;
-}
-</style>

@@ -5,7 +5,8 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Gridsome',
+	siteName: 'Nico Salvador',
+	siteUrl: 'https://www.salvadornico.com',
 	plugins: [
 		{ use: 'gridsome-plugin-pug' },
 		{ use: 'gridsome-plugin-typescript', },
