@@ -1,16 +1,15 @@
 <template lang="pug">
-#app-banner.md_min-h-screen
-	.row
-		.col.s12.l5
-			.card.large.hoverable
-				.card-image
-					img.h-64(:src="imagePath({ file: 'portrait.png' })" alt="That's me!")
-				.card-content
-					h1 Nico Salvador
-					h3 Quezon City, Philippines
-					.center-align
-						a(v-for="link in links" :href="link.url")
-							//- FAIcon(:icon="link.icon")
+#banner.md_min-h-screen
+	.container.mx-auto.align-middle.md_px-4
+		#profile-card.bg-white.rounded.shadow-lg
+			.card-image
+				img.h-64(:src="imagePath({ file: 'portrait.png' })" alt="That's me!")
+			.card-content
+				h1 Nico Salvador
+				h3 Quezon City, Philippines
+				.center-align
+					a(v-for="link in links" :href="link.url")
+						//- FAIcon(:icon="link.icon")
 
 		.col.s12.m10.offset-m1.l7.sidebox
 			.row
@@ -74,6 +73,20 @@ export default class Banner extends Vue implements ImageService {
 </script>
 
 <style lang="postcss">
+#banner {
+	display: grid;
+	grid-template-rows: 1fr auto 1fr;
+
+	& .container {
+		grid-row-start: 2;
+		grid-row-end: 3;
+
+		display: grid;
+		grid-template-columns: 40% 60%;
+	}
+}
+
+
 /* #app-banner {
 	min-height: 100vh; */
 
