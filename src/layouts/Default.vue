@@ -1,6 +1,5 @@
 <template lang="pug">
-#app
-	//- transition(name="component-fade" mode="out-in")
+#default-layout
 	slot
 	Footer
 </template>
@@ -18,29 +17,24 @@ import { Component } from "vue-property-decorator"
 export default class App extends Vue {}
 </script>
 
-<style>
-body {
-	display: flex;
-	min-height: 100vh;
-	width: 100%;
-	flex-direction: column;
-	background-color: #3949ab;
-}
-
-main {
-	flex: 1 0 auto;
-}
-
+<style lang="postcss">
 * {
-	position: relative;
 	font-family: "Open Sans", sans-serif;
 }
 
-.component-fade-enter-active, .component-fade-leave-active {
-	transition: opacity 0.3s ease;
+html {
+	height: 100%;
 }
 
-.component-fade-enter, .component-fade-leave-to {
-	opacity: 0;
+body {
+	min-height: 100%;
+	display: grid;
+	grid-template-rows: 1fr auto;
+	background-color: #3949ab;
+}
+
+footer {
+	grid-row-start: 2;
+	grid-row-end: 3;
 }
 </style>
