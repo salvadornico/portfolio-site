@@ -2,8 +2,7 @@
 #banner.md_min-h-screen
 	.container.mx-auto.align-middle.md_px-4
 		#profile-card.bg-white.rounded.shadow-lg
-			.card-image
-				img.h-64(:src="imagePath({ file: 'portrait.png' })" alt="That's me!")
+			g-image(src="~/assets/images/portrait.png")
 			.card-content
 				h1 Nico Salvador
 				h3 Quezon City, Philippines
@@ -86,11 +85,10 @@ export default class Banner extends Vue implements ImageService {
 	}
 }
 
-
 /* #app-banner {
 	min-height: 100vh; */
 
-	/* @media TabletUp
+/* @media TabletUp
 		padding-top 10vh
 
 		& > div
@@ -129,7 +127,6 @@ export default class Banner extends Vue implements ImageService {
 			color black
 			font-size 1.7rem */
 /* } */
-
 
 /* .sidebox {
 	color: white;
