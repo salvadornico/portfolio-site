@@ -14,8 +14,8 @@ Layout
 import Vue from "vue"
 
 export default Vue.extend({
-	// metaInfo: {
-	// 	title: 'Nico Salvador'
-	// }
+	metaInfo: {
+		title: "Hi there!"
+	}
 })
 </script>

@@ -3,12 +3,12 @@
 	.container.mx-auto.align-middle.md_px-4
 		#profile-card.bg-white.rounded.shadow-lg
 			g-image(src="~/assets/images/portrait.png")
-			.card-content
-				h1 Nico Salvador
-				h3 Quezon City, Philippines
-				.center-align
-					a(v-for="link in links" :href="link.url")
-						//- FAIcon(:icon="link.icon")
+			.card-content.p-8
+				h1.text-4xl Nico Salvador
+				h3.text-3xl Quezon City, Philippines
+				.banner-links.mt-4
+					a.mx-1(v-for="link in links" :href="link.url")
+						FAIcon(:icon="link.icon")
 
 		.col.s12.m10.offset-m1.l7.sidebox
 			.row
@@ -29,18 +29,18 @@
 </template>
 
 <script lang="ts">
-// import FAIcon from "~/components/shared/FAIcon.vue"
+import FAIcon from "~/components/shared/FAIcon.vue"
 // import MaterialIcon from "~/components/shared/MaterialIcon.vue"
 import { ImagePathOptions, ImageService } from "~/helpers/images.service"
 import Vue from "vue"
 import { Component } from "vue-property-decorator"
 
 @Component({
-	// components: {
-	// 	FAIcon,
-	// 	MaterialIcon,
-	// },
-	mixins: [ImageService],
+	components: {
+		FAIcon
+		// 	MaterialIcon,
+	},
+	mixins: [ImageService]
 })
 export default class Banner extends Vue implements ImageService {
 	$eventBus: any
@@ -49,20 +49,20 @@ export default class Banner extends Vue implements ImageService {
 	links = [
 		{
 			url: "mailto:salvador.nico@gmail.com",
-			icon: { name: "envelope" },
+			icon: { name: "envelope" }
 		},
 		{
 			url: "https://github.com/salvadornico",
-			icon: { pack: "fab", name: "github" },
+			icon: { pack: "fab", name: "github" }
 		},
 		{
 			url: "https://www.linkedin.com/in/salvadornico",
-			icon: { pack: "fab", name: "linkedin" },
+			icon: { pack: "fab", name: "linkedin" }
 		},
 		{
 			url: "https://www.facebook.com/salvador.nico",
-			icon: { pack: "fab", name: "facebook-official" },
-		},
+			icon: { pack: "fab", name: "facebook-official" }
+		}
 	]
 
 	openFab() {
@@ -83,6 +83,14 @@ export default class Banner extends Vue implements ImageService {
 		display: grid;
 		grid-template-columns: 40% 60%;
 	}
+}
+
+.card-content * {
+	font-family: Montserrat, sans-serif;
+}
+
+.banner-links i {
+	font-size: 1.7rem;
 }
 
 /* #app-banner {
