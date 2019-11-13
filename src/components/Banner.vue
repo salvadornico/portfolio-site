@@ -1,7 +1,7 @@
 <template lang="pug">
 #banner.md_min-h-screen
 	.container.mx-auto.align-middle.md_px-4
-		#profile-card.bg-white.rounded.shadow-lg
+		#profile-card.bg-white.rounded.shadow-lg.m-4
 			g-image(src="~/assets/images/portrait.png")
 			.card-content.p-8
 				h1.text-4xl Nico Salvador
@@ -76,8 +76,10 @@ export default class Banner extends Vue implements ImageService {
 		grid-row-start: 2;
 		grid-row-end: 3;
 
-		display: grid;
-		grid-template-columns: 40% 60%;
+		@media (min-width: 768px) {
+			display: grid;
+			grid-template-columns: 40% 60%;
+		}
 	}
 }
 
