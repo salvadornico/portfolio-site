@@ -10,20 +10,16 @@
 					a.mx-1(v-for="link in links" :href="link.url")
 						FAIcon(:icon="link.icon")
 
-		.col.s12.m10.offset-m1.l7.sidebox
-			.row
-				.col.s12
-					h2 Hi, I'm Nico.
-					p.
-						I'm into all sorts of things.#[br]Maybe we can work on something together?
-					p.
-						I've always had a hard time picking what it is I'm most into over the course of my life. There are just so many awesome things out there in the world to be involved in, why just choose one? I believe that incredible things can come out of the most unlikely partnerships.
-					h3 Let's get in touch!
-			.row.center-align
-				.col.s12.m6.offset-m3.pull-l3
-					a#scrollDownBtn.waves-effect.waves-light.btn-large.red.darken-1.hoverable(href="#contacts" target="_parent" data-scroll @click="openFab()")
-						//- MaterialIcon.left(icon="chat_bubble")
-						span Contact Me
+		#sidebox.p-8.text-white.align-middle
+			h2.text-4xl Hi, I'm Nico.
+			p.
+				I'm into all sorts of things.#[br]Maybe we can work on something together?
+			p.
+				I've always had a hard time picking what it is I'm most into over the course of my life. There are just so many awesome things out there in the world to be involved in, why just choose one? I believe that incredible things can come out of the most unlikely partnerships.
+			h3 Let's get in touch!
+			a#scrollDownBtn.waves-effect.waves-light.btn-large.red.darken-1.hoverable(href="#contacts" target="_parent" data-scroll @click="openFab()")
+				//- MaterialIcon.left(icon="chat_bubble")
+				span Contact Me
 			.row
 				a#seeMore.hvr-icon-hang.white-text(href="#app-body" target="_parent" data-scroll)
 </template>
