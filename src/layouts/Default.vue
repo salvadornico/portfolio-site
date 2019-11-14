@@ -3,10 +3,17 @@
 	.content
 		Banner
 		main
-			g-image(src="~/assets/images/kotlin-snippet.png" alt="Some Kotlin sample code")
+			Parallax
+				g-image.w-full(src="~/assets/images/kotlin-snippet.png" width="1000" height="300" alt="Some Kotlin sample code")
+
 			.container
 				slot
-			//- Parallax(type="video" video="/static/images/makerbot.mp4" image="header2gif.gif" alt="3D printing")
+
+			Parallax
+				.image-row
+					g-image.w-full(class=".w-2/4" src="~/assets/images/3dprinting.jpg" width="600" height="350" alt="3D printing a Brachiosaurus skull")
+					g-image.w-full(class=".w-2/4" src="~/assets/images/benchy.jpg" width="600" height="350" alt="3D Benchy")
+
 			//- Contacts
 		//- FAB
 	Footer
@@ -16,7 +23,7 @@
 import Banner from "~/components/Banner.vue"
 // import Contacts from "~/components/profile/body-sections/contacts/Contacts.vue"
 // import FAB from "~/components/profile/body-sections/FAB.vue"
-// import Parallax from "~/components/shared/Parallax.vue"
+import Parallax from "~/components/shared/Parallax.vue"
 import Footer from "~/components/Footer.vue"
 import Vue from "vue"
 import { Component } from "vue-property-decorator"
@@ -24,7 +31,7 @@ import { Component } from "vue-property-decorator"
 @Component({
 	components: {
 		Banner,
-		// Parallax,
+		Parallax,
 		// Contacts,
 		// FAB,
 		Footer,
@@ -47,6 +54,11 @@ html {
 	min-height: 100%;
 	display: grid;
 	grid-template-rows: 1fr auto;
+
+	& .image-row {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
 }
 
 footer {

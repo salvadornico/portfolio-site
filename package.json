@@ -10,7 +10,9 @@
 		"explore": "gridsome explore"
 	},
 	"dependencies": {
-		"gridsome": "^0.7.0"
+		"@types/rellax": "^1.7.2",
+		"gridsome": "^0.7.0",
+		"rellax": "^1.10.0"
 	},
 	"devDependencies": {
 		"gridsome-plugin-pug": "0.0.3",
