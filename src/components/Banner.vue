@@ -17,7 +17,7 @@
 			p.
 				I've always had a hard time picking what it is I'm most into over the course of my life. There are just so many awesome things out there in the world to be involved in, why just choose one? I believe that incredible things can come out of the most unlikely partnerships.
 			h3.text-3xl Let's get in touch!
-			a#scrollDownBtn.bg-red-700.rounded.shadow-lg.p-8(class="w-2/4" href="#contacts" target="_parent" data-scroll @click="openFab()")
+			a#scrollDownBtn.bg-red-700.rounded.shadow-lg.p-8.mt-6.ml-3(class="w-3/4 md_w-2/4" href="#contacts" target="_parent" data-scroll @click="openFab()")
 				FAIcon.mx-4(icon="comment")
 				span.font-semibold TODO: Fix smooth scroll
 			a#seeMore.text-3xl.mt-8.text-center(href="#app-body" target="_parent" data-scroll)
