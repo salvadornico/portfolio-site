@@ -11,7 +11,7 @@ import { Component } from "vue-property-decorator"
 @Component
 export default class Parallax extends Vue {
 	mounted() {
-		var rellax = new Rellax('.parallax-container', {
+		var rellax = new Rellax(".parallax-container", {
 			speed: 2,
 			center: true,
 		})

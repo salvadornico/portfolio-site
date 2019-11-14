@@ -5,13 +5,13 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-	siteName: 'Nico Salvador',
-	siteUrl: 'https://www.salvadornico.com',
+	siteName: "Nico Salvador",
+	siteUrl: "https://www.salvadornico.com",
 	plugins: [
-		{ use: 'gridsome-plugin-pug' },
-		{ use: 'gridsome-plugin-typescript', },
+		{ use: "gridsome-plugin-pug" },
+		{ use: "gridsome-plugin-typescript", },
 		{
-			use: 'gridsome-plugin-tailwindcss',
+			use: "gridsome-plugin-tailwindcss",
 			options: {
 				purgeConfig: {},
 				presetEnvConfig: {},

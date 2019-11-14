@@ -11,7 +11,7 @@ export default class FAIcon extends Vue {
 	@Prop() icon: { pack: string; name: string } | string
 
 	get iconClass(): string {
-		if (typeof this.icon === 'string') {
+		if (typeof this.icon === "string") {
 			return `fas fa-${this.icon}`
 		}
 
