@@ -1,32 +1,31 @@
 <template lang="pug">
 #banner.md_min-h-screen
-	.container.mx-auto.align-middle.md_px-4
-		#profile-card.bg-white.rounded.shadow-lg.m-4
+	.container.mx-auto.md_px-4
+		.profile-card.bg-white.rounded.shadow-lg.m-4
 			g-image(src="~/assets/images/portrait.png")
 			.card-content.p-8
 				h1.text-4xl Nico Salvador
 				h3.text-3xl Quezon City, Philippines
-				.banner-links.mt-4
+				.mt-4
 					a.mx-1(v-for="link in links" :href="link.url")
 						FAIcon(:icon="link.icon")
 
-		#sidebox.p-8.text-white.align-middle
+		.sidebox.p-8.text-white.flex.flex-col.justify-center
 			h2.text-4xl Hi, I'm Nico.
 			p.
 				I'm into all sorts of things.#[br]Maybe we can work on something together?
 			p.
 				I've always had a hard time picking what it is I'm most into over the course of my life. There are just so many awesome things out there in the world to be involved in, why just choose one? I believe that incredible things can come out of the most unlikely partnerships.
-			h3 Let's get in touch!
-			a#scrollDownBtn.waves-effect.waves-light.btn-large.red.darken-1.hoverable(href="#contacts" target="_parent" data-scroll @click="openFab()")
-				//- MaterialIcon.left(icon="chat_bubble")
-				span Contact Me
-			.row
-				a#seeMore.hvr-icon-hang.white-text(href="#app-body" target="_parent" data-scroll)
+			h3.text-3xl Let's get in touch!
+			a#scrollDownBtn.bg-red-700.rounded.shadow-lg.p-8(class="w-2/4" href="#contacts" target="_parent" data-scroll @click="openFab()")
+				FAIcon.mx-4(icon="comment")
+				span.font-semibold TODO: Fix smooth scroll
+			a#seeMore.text-3xl.mt-8.text-center(href="#app-body" target="_parent" data-scroll)
+				FAIcon(icon="chevron-down")
 </template>
 
 <script lang="ts">
 import FAIcon from "~/components/shared/FAIcon.vue"
-// import MaterialIcon from "~/components/shared/MaterialIcon.vue"
 import { ImagePathOptions, ImageService } from "~/helpers/images.service"
 import Vue from "vue"
 import { Component } from "vue-property-decorator"
@@ -34,7 +33,6 @@ import { Component } from "vue-property-decorator"
 @Component({
 	components: {
 		FAIcon
-		// 	MaterialIcon,
 	},
 	mixins: [ImageService]
 })
@@ -81,114 +79,19 @@ export default class Banner extends Vue implements ImageService {
 			grid-template-columns: 40% 60%;
 		}
 	}
-}
 
-.card-content * {
-	font-family: Montserrat, sans-serif;
-}
+	& .card-content {
+		& h1, h3 {
+			font-family: Montserrat, sans-serif;
+		}
 
-.banner-links i {
-	font-size: 1.7rem;
-}
+		& i {
+			font-size: 1.7rem;
+		}
+	}
 
-/* #app-banner {
-	min-height: 100vh; */
-
-/* @media TabletUp
-		padding-top 10vh
-
-		& > div
-			center Y absolute
-
-		.card
-			@media TabletDown
-				max-width 60%
-				margin 0 auto
-
-	.card-content
-		height 100%
-
-		& > *
-			font-family "Montserrat", sans-serif
-			display block
-			color black
-
-		h1
-			margin-top 0.3rem
-			font-size 2rem
-
-		h3
-			font-size 1.6rem
-
-		div
-			position absolute
-			bottom 0
-			margin-bottom 3%
-
-		a
-			display inline-block
-			margin auto 0.4rem 0.4rem
-
-		i
-			color black
-			font-size 1.7rem */
-/* } */
-
-/* .sidebox {
-	color: white;
-
-	& a {
-		display block
-		min-width 10rem
+	& .sidebox > * {
+		padding: 0.75rem;
 	}
 }
-
-#seeMore
-	font-size 1.25rem
-	text-align center
-	width 1rem
-	center X absolute
-
-	@media MobileOnly
-		margin-top -1rem
-
-highPoint = -2px
-lowPoint = 6px
-
-@keyframes hvr-icon-hang
-	0%
-		transform translateY(lowPoint)
-
-	50%
-		transform translateY(highPoint)
-
-	100%
-		transform translateY(lowPoint)
-
-@keyframes hvr-icon-hang-sink
-	100%
-		transform translateY(lowPoint)
-
-.hvr-icon-hang
-	display inline-block
-	vertical-align middle
-	transform perspective(1px) translateZ(0)
-	box-shadow 0 0 1px transparent
-	position relative
-	transition-duration 0.3s
-
-	&:before
-		content "\f063"
-		text-align center
-		position absolute
-		font-family "Font Awesome 5 Free"
-		font-weight 900
-		transform translateZ(0)
-		animation-name hvr-icon-hang-sink, hvr-icon-hang
-		animation-duration 0.3s, 1.5s
-		animation-delay 0s, 0.3s
-		animation-timing-function ease-out, ease-in-out
-		animation-iteration-count 1, infinite
-		animation-fill-mode forwards
-		animation-direction normal, alternate */
 </style>
