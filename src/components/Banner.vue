@@ -2,7 +2,7 @@
 #banner.md_min-h-screen
 	.container.mx-auto.md_px-4
 		.profile-card.bg-white.rounded.shadow-lg.m-4
-			g-image(src="~/assets/images/portrait.png")
+			g-image(src="~/assets/images/portrait.png" alt="Drawing of me")
 			.card-content.p-8
 				h1.text-4xl Nico Salvador
 				h3.text-3xl Quezon City, Philippines

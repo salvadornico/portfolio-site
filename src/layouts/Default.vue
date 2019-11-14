@@ -3,7 +3,7 @@
 	.content
 		Banner
 		main
-			//- Parallax(image="kotlin-snippet.png" alt="Some Kotlin sample code")
+			g-image(src="~/assets/images/kotlin-snippet.png" alt="Some Kotlin sample code")
 			.container
 				slot
 			//- Parallax(type="video" video="/static/images/makerbot.mp4" image="header2gif.gif" alt="3D printing")
