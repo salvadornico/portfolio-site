@@ -26,7 +26,6 @@
 
 <script lang="ts">
 import FAIcon from "~/components/shared/FAIcon.vue"
-import { ImagePathOptions, ImageService } from "~/helpers/images.service"
 import Vue from "vue"
 import { Component } from "vue-property-decorator"
 
@@ -34,11 +33,9 @@ import { Component } from "vue-property-decorator"
 	components: {
 		FAIcon
 	},
-	mixins: [ImageService]
 })
-export default class Banner extends Vue implements ImageService {
+export default class Banner extends Vue {
 	$eventBus: any
-	imagePath: (options: ImagePathOptions) => string
 
 	links = [
 		{
