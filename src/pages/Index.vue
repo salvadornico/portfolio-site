@@ -1,7 +1,7 @@
 <template lang="pug">
 Layout
 	#app-body
-		h2 Things I'm Into
+		h2.text-center.text-white.font-bold.text-3xl Things I'm Into
 		SectionSoftware
 		SectionMaking
 		SectionMarketing
@@ -25,6 +25,9 @@ import SectionSoftware from "~/components/sections/SectionSoftware.vue"
 		SectionMarketing,
 		SectionBlading,
 		OtherThings,
+	},
+	metaInfo: {
+		title: "Hi there!"
 	},
 })
 export default class Body extends Vue {}

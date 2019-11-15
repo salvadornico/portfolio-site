@@ -61,7 +61,7 @@ export default class Banner extends Vue {
 	display: grid;
 	grid-template-rows: 1fr auto 1fr;
 
-	& .container {
+	& > div {
 		grid-row-start: 2;
 		grid-row-end: 3;
 

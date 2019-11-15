@@ -6,7 +6,7 @@
 			Parallax
 				g-image.w-full(src="~/assets/images/kotlin-snippet.png" width="1000" height="300" alt="Some Kotlin sample code")
 
-			.container
+			.container.mx-auto
 				slot
 
 			Parallax
@@ -40,6 +40,7 @@ export default class Profile extends Vue {}
 <style lang="postcss">
 * {
 	font-family: "Open Sans", sans-serif;
+	max-width: 100vw;
 }
 
 html {
