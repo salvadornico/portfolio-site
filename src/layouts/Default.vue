@@ -15,14 +15,12 @@
 					g-image.w-full(class=".w-2/4" src="~/assets/images/benchy.jpg" width="600" height="350" alt="3D Benchy")
 
 			Contacts
-		//- FAB
 	Footer
 </template>
 
 <script lang="ts">
 import Banner from "~/components/Banner.vue"
 import Contacts from "~/components/contacts/Contacts.vue"
-// import FAB from "~/components/profile/body-sections/FAB.vue"
 import Parallax from "~/components/shared/Parallax.vue"
 import Footer from "~/components/Footer.vue"
 import Vue from "vue"
@@ -33,7 +31,6 @@ import { Component } from "vue-property-decorator"
 		Banner,
 		Parallax,
 		Contacts,
-		// FAB,
 		Footer,
 	},
 })
