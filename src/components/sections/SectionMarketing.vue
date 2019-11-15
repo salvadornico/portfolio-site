@@ -15,7 +15,7 @@ SectionCard(title="Marketing/PR/events")
 </template>
 
 <script lang="ts">
-import SectionCard from "@/components/shared/SectionCard.vue"
+import SectionCard from "~/components/shared/SectionCard.vue"
 import Vue from "vue"
 import { Component } from "vue-property-decorator"
 

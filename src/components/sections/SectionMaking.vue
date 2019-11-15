@@ -17,8 +17,7 @@ SectionCard(title="Making Things")
 </template>
 
 <script lang="ts">
-import SectionCard from "@/components/shared/SectionCard.vue"
-import { ImagePathOptions, ImageService } from "@/helpers/images.service"
+import SectionCard from "~/components/shared/SectionCard.vue"
 import Vue from "vue"
 import { Component } from "vue-property-decorator"
 
@@ -26,9 +25,6 @@ import { Component } from "vue-property-decorator"
 	components: {
 		SectionCard,
 	},
-	mixins: [ImageService],
 })
-export default class SectionMaking extends Vue implements ImageService {
-	imagePath: (options: ImagePathOptions) => string
-}
+export default class SectionMaking extends Vue {}
 </script>

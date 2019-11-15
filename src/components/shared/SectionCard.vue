@@ -13,23 +13,18 @@
 </template>
 
 <script lang="ts">
-import { ImagePathOptions, ImageService } from "@/helpers/images.service"
 import Vue from "vue"
 import { Component, Prop } from "vue-property-decorator"
 
-@Component({
-	mixins: [ImageService],
-})
+@Component
 export default class SectionCard extends Vue {
 	@Prop() title: string
 	@Prop() image: string
-
-	imagePath: (options: ImagePathOptions) => string
 }
 </script>
 
-<style lang="stylus" scoped>
-.card
+<style lang="postcss">
+/* .card
 	color black
 	width 100%
 
@@ -41,5 +36,5 @@ export default class SectionCard extends Vue {
 		margin auto 2rem
 
 	p
-		margin 0.7rem auto
+		margin 0.7rem auto */
 </style>

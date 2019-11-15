@@ -1,22 +1,31 @@
 <template lang="pug">
 Layout
 	#app-body
-		// Learn how to use images here: https://gridsome.org/docs/images
-		g-image(alt="Example image" src='~/favicon.png' width='135')
-		h1.text-xl Hello, world!
-		p
-		| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-		p.home-links
-			a(href='https://gridsome.org/docs/' target='_blank' rel='noopener') Gridsome Docs
-			a(href='https://github.com/gridsome/gridsome' target='_blank' rel='noopener') GitHub
+		h2 Things I'm Into
+		SectionSoftware
+		SectionMaking
+		SectionMarketing
+		SectionBlading
+		OtherThings
 </template>
 
 <script lang="ts">
 import Vue from "vue"
+import { Component } from "vue-property-decorator"
+import OtherThings from "~/components/sections/things/OtherThings.vue"
+import SectionBlading from "~/components/sections/SectionBlading.vue"
+import SectionMaking from "~/components/sections/SectionMaking.vue"
+import SectionMarketing from "~/components/sections/SectionMarketing.vue"
+import SectionSoftware from "~/components/sections/SectionSoftware.vue"
 
-export default Vue.extend({
-	metaInfo: {
-		title: "Hi there!"
-	}
+@Component({
+	components: {
+		SectionSoftware,
+		SectionMaking,
+		SectionMarketing,
+		SectionBlading,
+		OtherThings,
+	},
 })
+export default class Body extends Vue {}
 </script>

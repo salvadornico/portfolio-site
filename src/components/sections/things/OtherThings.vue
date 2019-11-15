@@ -17,7 +17,7 @@
 <script lang="ts">
 import Vue from "vue"
 import { Component } from "vue-property-decorator"
-import Thing from "./things/Thing.vue"
+import Thing from "~/components/sections/things/Thing.vue"
 
 @Component({
 	components: {
@@ -77,8 +77,8 @@ export default class OtherThings extends Vue {
 }
 </script>
 
-<style lang="stylus" scoped>
-h3
+<style lang="postcss" scoped>
+/* h3
 	color white
 
 #inspirations
@@ -104,5 +104,5 @@ h3
 	iframe
 		width 80%
 		max-width 30rem
-		center X absolute
+		center X absolute */
 </style>
