@@ -6,7 +6,7 @@
 			Parallax
 				g-image.w-full(src="~/assets/images/kotlin-snippet.png" width="1000" height="300" alt="Some Kotlin sample code")
 
-			.container.mx-auto
+			.container.mx-auto.mt-8
 				slot
 
 			Parallax
@@ -14,7 +14,7 @@
 					g-image.w-full(class=".w-2/4" src="~/assets/images/3dprinting.jpg" width="600" height="350" alt="3D printing a Brachiosaurus skull")
 					g-image.w-full(class=".w-2/4" src="~/assets/images/benchy.jpg" width="600" height="350" alt="3D Benchy")
 
-			Contacts
+			Contacts.mt-32
 	Footer
 </template>
 
